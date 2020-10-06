@@ -190,10 +190,13 @@
                 </div>
             </div>
 
+            {{ form.captcha }}
+
             <label class="checkbox">
                 <input type="checkbox" name="terms_and_conditions">
                 Sunt de acord cu <a href="{% url 'terms' %}">termenii și condițiile platformei VotONG</a>.
             </label>
+
 
             <div id="contact-form-buttons">
                 <button type="submit" class="button is-warning">Trimite</button>
