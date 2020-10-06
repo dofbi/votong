@@ -45,7 +45,7 @@
                 <a href="{% url 'about' %}" class="button is-warning">Află mai multe</a>
             </div>
             <div class="column is-half">
-                <img class="" src="{% static "images/about.svg" %}" alt="about">
+                <img class="" src="{% static "images/about.png" %}" alt="about">
             </div>
         </div>
     </div>
@@ -125,19 +125,23 @@
 
 <div id="alegeri-inscriere" class="container">
     <h2 class="tile-title has-text-weight-bold">Vino alături de noi</h2>
-    <div class="is-flex">
-        <p>
-            Asigurarea reprezentativității societății civile în forurile de decizie este extrem de importantă,
-            pentru a putea să ne facem vocile auzite în momentul luării de hotărâri care pot influența întregul sector neguvernamental.
-        </p>
-        <a href="{% url 'ngos-register-request' %}" class="button is-warning">Îmi înscriu organizația</a>
+    <div class="columns is-centered">
+        <div class="column">
+            <p>
+                Asigurarea reprezentativității societății civile în forurile de decizie este extrem de importantă,
+                pentru a putea să ne facem vocile auzite în momentul luării de hotărâri care pot influența întregul sector neguvernamental.
+            </p>
+        </div>
+        <div class="column is-narrow">
+            <a href="{% url 'ngos-register-request' %}" class="button is-warning">Îmi înscriu organizația</a>
+        </div>
     </div>
 </div>
 
 <hr />
 
-<div id="contact" class="container tight-container">
-    <div>
+<div id="contact" class="container tight-container columns is-centered">
+    <div class="column">
         <h3 class="tile-title">Intră în contact</h3>
         <p>
             Dacă vrei să iei legătura cu noi, pentru sugestii, propuneri de îmbunătățire sau dacă ai întrebări,
@@ -150,7 +154,7 @@
             recurentă pentru noi.
         </p>
     </div>
-    <div id="contact-form">
+    <div id="contact-form" class="column">
         {% if messages %}
         <article class="message is-success">
             <div class="message-body">
