@@ -1,7 +1,11 @@
-#! /usr/bin/env sh 
+#! /usr/bin/env sh
 set -x
-cd $VOTONG_HOME
-git pull
-docker-compose down
-docker-compose build
-docker-compose up -d
+
+DEPLOY_DIR=$(dirname "$0")
+SOURCE_DIR="${DEPLOY_DIR}/../"
+
+cd $SOURCE_DIR \
+    && git pull \
+    && docker-compose down \
+    && docker-compose build \
+    && docker-compose up -d
