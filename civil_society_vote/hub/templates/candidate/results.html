@@ -45,7 +45,7 @@
         </div>
 
         {% load cache %}
-        {% cache 86400 votes %}
+        {% cache 86400 votes_count %}
         {% for candidate in domain|candidates_in_domain %}
 
         <div class="need is-flex container infinite-item">
@@ -75,7 +75,7 @@
                 {% if forloop.counter <= domain.seats %}
                     <div class="need-title has-text-success">Câștigător (rezultate provizorii)</div>
                 {% endif %}
-                <div class="need-title">Voturi: {% votes_per_candidate candidate %}</div>
+                <div class="need-title">Voturi: {% votes_per_candidate candidate as votes_count %}</div>
             </div>
         
             <div class="need-call2action">
